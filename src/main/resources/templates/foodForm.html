@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Welcome to Organic Kitchen</h1>
+<form method="post" action="/add" th:object="${food}" enctype="multipart/form-data">
+    <input type="hidden" th:field="*{id}">
+    Name: <input type="text" id="name" th:field="*{name}" />
+    Price: <input type="text" id="price" th:field="*{price}" />
+    Image: <input type="file" name="file" />
+    Description: <input type="text" id="description" th:field="*{description}" />
+    <input type="submit" value="Submit" />
+</form>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<a href="/add">Add a new food</a>
+<div th:each="foods :${food}">
+    <div th:if="${foods.image}" !="null">
+        <img th:src="${foods.image}" />
+    </div>
+    Name: <div th:text="${foods.name}"></div> <br />
+    Price: $<div th:text="${foods.price}"></div> <br />
+    Description: <div th:text="${foods.description}"></div> <br />
+
+</div>
+
+
+</html>
